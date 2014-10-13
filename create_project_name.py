@@ -3,12 +3,14 @@ dictionary={
     'good',
     'nice',
     'bad',
-    'ugly',],
+    'ugly',
+    'new',],
 'names':[
     'book',
     'computer',
     'bird',
-    'tree',],
+    'tree',
+    'table',],
 }
 
 import pickle
