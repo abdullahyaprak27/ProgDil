@@ -14,12 +14,12 @@ dictionary={
 }
 
 import pickle
-f = open("s%s%s'%(first_part,w_space,second_part)",'w')
+f = open("dosya.txt",'w')
 pickle.dump(dictionary, f)
 f.close()
 
 
-f1 = open("%s%s%s'%(first_part,w_space,second_part)",'r')
+f1 = open("dosya.txt",'r')
 sd = pickle.load(f1)
 f1.close()
 
@@ -33,5 +33,3 @@ f3 = open("%s%s%s'%(first_part,w_space,second_part)","w")
 f3.writelines('%s%s%s'%(first_part,w_space,second_part))
 
 f3.close()
-
-
