@@ -1,4 +1,6 @@
-def ReplaceUnderscoreWithSpace( string ):
+#!/usr/bin/python
+import sys
+def main( string ):
     liste = list(string) 
     first_index = FirstAndLastControl(liste)
     last_index = FirstAndLastControl(liste[::-1])
@@ -7,7 +9,7 @@ def ReplaceUnderscoreWithSpace( string ):
     for i in range(len(character_control)):
         liste[first_index+i] = character_control[i]
 
-    return "".join(liste)
+    print "".join(liste)
 
 def Control(harf):
     
@@ -28,9 +30,9 @@ def FirstAndLastControl(liste):
         
     
         
-               
-        
+args = sys.argv[1:]
+
+main(args[0])       
     
         
-        
-    
+      
