@@ -1,0 +1,18 @@
+#!/usr/bin/python
+from odev import *
+import sys
+
+def main(args):
+    if len(args)==1:
+        return odev()
+    elif len(args)==2:
+        if args[1]=="en":
+            return odev(language=args[1])
+        elif args[1].isdigit():
+            return odev(again=args[1])
+
+    elif len(args)==3:
+        return odev(language=args[1],again=args[2])
+    
+args = sys.argv[:]
+main(args)

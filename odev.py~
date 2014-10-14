@@ -1,0 +1,47 @@
+#!/usr/bin/python
+import random
+class a:
+    def __init__(self,language="tr",again=1):
+        
+        self.language=language
+        self.again=int(again)
+        self.isim_uret(self.again)
+
+
+
+    def isim_uret(self,tekrar):
+        i = 0
+        while tekrar > i:
+            c=self.isim_u()
+            byrk=self.karsilastir(c)
+
+            if byrk==False:
+                f1=open("deneme5.txt","a")
+                f1.writelines(c+"\n")
+                f1.close()
+                print c
+                i += 1
+            else:
+                pass
+            
+            
+    def isim_u(self):
+    
+        isimler=["adem","veli","mahmut","hakan","orhan","fatih","cem","can"]
+        sifatlar=["iyi","guzel","cirkin"]
+        i= random.choice(isimler)," ",random.choice(sifatlar)
+        i = ( "".join(i))
+        return i
+    def karsilastir(self,c):
+        flag=False
+        f1=open("deneme5.txt","r")
+
+        for j in f1:
+            if j==(c+"\n"):
+                flag= True
+        f1.close()
+        return flag
+
+
+            
+    
